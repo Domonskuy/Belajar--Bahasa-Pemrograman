@@ -1,0 +1,279 @@
+#include <iostream>
+using namespace std;
+
+class persegipanjang{
+int panjang,lebar;
+public:
+int luas(){
+return (panjang*lebar);
+}
+
+void set_values(int x, int y){
+panjang = x;
+lebar = y;
+}
+};
+
+class segitiga{
+int alas,tinggi;
+public:
+float luas(){
+return (alas*tinggi*0.5);
+}
+void set_values(int a,int t){
+alas = a;
+tinggi = t;
+}
+};
+
+int main(){
+persegipanjang kotak1;
+persegipanjang kotak2;
+segitiga segitiga1;
+segitiga segitiga2;
+kotak1.set_values(10,10);
+kotak2.set_values(5,5);
+segitiga1.set_values(7,6);
+segitiga2.set_values(3,7);
+cout<< "Luas Kotak 1 adalah "<<kotak1.luas()<<endl;
+cout<< "Luas Kotak 2 adalah "<<kotak2.luas()<<endl;
+cout<< "Luas Segitiga 1 adalah "<<segitiga1.luas()<<endl;
+cout<< "Luas Segitiga 2 adalah "<<segitiga2.luas()<<endl;
+}
+
+
+
+
+
+
+==========================================================
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class modelponsel{
+private:
+string model;
+string series;
+int tipe;
+public:
+modelponsel(string model, string series,int tipe){
+modelponsel::model = model;
+modelponsel::series = series;
+modelponsel::tipe = tipe;
+}
+
+void perolehinfo(void){
+cout<<"Model     : "<<model<<endl;
+cout<<"Series    : "<<series<<endl;
+cout<<"Tipe      : "<<tipe<<endl;
+cout<<endl;
+}
+};
+
+int main(){
+modelponsel pabrikan_x("MGT-25","MG",25);
+modelponsel pabrikan_y("SRP-23","SR",23);
+pabrikan_x.perolehinfo();
+pabrikan_y.perolehinfo();
+return 0;
+}
+=======================================================
+#include <iostream>
+#include <string>
+using namespace std;
+class hitung{
+private:
+int a,b,c;
+
+public:
+void assign(int d,int e,int f){
+a=d;
+b=e;
+c=f;
+}
+int tambah(){
+return a+b+c;
+}
+};
+
+int main(){
+hitung obj;
+obj.assign(2,8,5);
+cout<<obj.tambah()<<endl;
+return 0;
+}
+==========================================================
+#include <iostream>
+
+using namespace std;
+
+class kasir
+{
+    private:
+    double saldo;
+    
+    public:
+    kasir(){
+    
+        saldo=500;
+    }
+    
+    void pemasukan(double uang){
+    
+        saldo=saldo+uang;
+    }
+
+    void pengeluaran(double uang)
+    {
+        saldo=saldo-uang;
+}    
+
+    void cetakSaldo()
+    {
+        cout<<"Saldo kasir = " << saldo <<endl;
+    }
+};
+
+int main()
+{
+    kasir x;
+    x.cetakSaldo();
+    x.pemasukan(200);
+    x.cetakSaldo();
+    x.pengeluaran(100);
+    x.cetakSaldo();
+}
+===========================================================
+#include <iostream>
+#include <string>
+using namespace std;
+struct robot_struct{
+int id;
+int no_wheels;
+string robot_name;
+};
+
+class robot_class{
+public:
+int id;
+int no_wheels;
+string robot_name;
+void move_robot();
+void stop_robot();
+};
+
+void robot_class::move_robot(){
+cout<<"Moving Robot"<<endl;
+};
+
+void robot_class::stop_robot(){
+cout<<"Stopping Robot"<<endl;
+};
+
+int main(){
+robot_struct robot1;
+robot_class robot2;
+
+robot1.id=2;
+robot1.robot_name="Mobil Robot";
+
+robot2.id=3;
+robot2.robot_name="Humanoid Robot";
+
+cout<<"ID="<<robot1.id<<" "<<"Robot Name:"<<robot1.robot_name<<endl;
+cout<<"ID="<<robot2.id<<" "<<"Robot Name:"<<robot2.robot_name<<endl;
+
+robot2.move_robot();
+robot2.stop_robot();
+return 0;
+}
+================================================================
+#include <iostream>
+using namespace std;
+
+class kendaraan
+{
+private:
+string nama;
+
+public:
+kendaraan(string nama)
+{
+kendaraan::nama = nama;
+cout<<"Hidupkan mesin kendaraan..."<<endl;
+}
+
+kendaraan()
+{
+cout<<"Matikan mesin kendaraan..."<<endl;
+}
+
+void info()
+{
+cout<<nama<<" sedang berjalan..."<<endl;
+}
+};
+class Truk : public kendaraan
+{
+public:
+Truk(string nama): kendaraan(nama)
+{
+cout<<"Hidupkan mesin truk "<<nama<<endl;
+}
+
+~Truk()
+{
+cout<<"Matikakan mesin truk..."<<endl;
+cout<<"Matikan mesin kendaraan..."<<endl;
+}
+};
+
+int main()
+{
+Truk fuso("FUSO");
+fuso.info();
+
+cout<<"Akhir main()..."<<endl;
+
+return 0;
+}
+================================================
+#include<iostream>
+using namespace std;
+
+class Buku
+{
+private:
+string judul;
+string pengarang;
+int jumlah;
+public:
+void inisialisasi (string arg_judul,string arg_pengarang,int arg_jumlah)
+{
+judul=arg_judul;
+pengarang= arg_pengarang;
+jumlah = arg_jumlah;
+};
+
+void info()
+{
+cout<<"Judul: "<<judul<<endl;
+cout<<"Pengerang: "<<pengarang<<endl;
+cout<<"Jumlah :"<<jumlah<<endl;
+};
+
+int main()
+{
+Buku novel,fiksi;//deklarasi dua objek
+
+novel.inisialisasi("Meriam Benteng Navarone","Aliastair MacLean",12);
+fiksi.inisialisasi("Jurassic Park","Micheal Crichton",3);
+
+novel.info();
+fiksi.info();
+
+return 0;
+}
+}

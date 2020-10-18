@@ -1,0 +1,159 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+int pilihan;
+
+cout<<"Daftar bahasa pemrograman:\n";
+cout<<"1. Java \n2. C++ \n3. PHP\n";
+ulangi:
+
+cout << "Masukan pilihan anda (1-3): ";
+cin >> pilihan;
+
+switch(pilihan){
+case 1:
+cout<< "Anda memilih Pemrograman Java";
+break;
+case 2:
+cout<< "Anda memilih Pemrograman C++";
+break;
+case 3:
+cout<< "Anda memilih Pemrograman PHP";
+break;
+
+default:
+goto ulangi;
+}
+}
+=============================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const float PHI = 3.141592;
+    float jari_jari,luas,keliling;
+    
+    jari_jari = 10;
+    luas = PHI*jari_jari*jari_jari;
+    keliling = 2*PHI*jari_jari;
+    
+    cout << "Luas = " << luas << endl;
+    cout << "Keliling = " << keliling << endl;
+    
+    return 0;
+}
+==============================================
+#include <iostream>
+using namespace std;
+int main()
+{
+const int jum_elemen = 5;
+float suhu[jum_elemen];
+
+cout<<"Masukkan "<<jum_elemen<<" data suhu"<<endl;
+for(int i=0; i<jum_elemen;i++){
+cout<< i+1 << " : ";
+cin>>suhu[i];
+}
+
+cout<< "Data suhu yang Anda masukkan"<<endl;
+for(int i=0; i< jum_elemen;i++)
+cout<<suhu[i]<<endl;
+ return 0;
+}
+=================================================
+#include<iostream>
+using namespace std;
+
+int oblada =550;
+void tambah();
+int main(){
+cout<<oblada<<endl;
+tambah();
+cout<<oblada<<endl;
+tambah();
+cout<<oblada<<endl;
+return 0;
+}
+
+void tambah(){
+oblada++;
+}
+==================================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int tinggi,baris,kolom;
+   
+   cout<<"Tinggi segitiga = ";
+   cin>>tinggi;
+   cout<<endl;
+   for(baris = 1;kolom<=tinggi;baris++){
+   for(kolom=1;kolom<=baris;kolom++)
+   cout<<"*";
+   cout<<endl;
+   }
+   return 0;
+
+}
+====================================================
+
+#include <iostream> 
+using namespace std; 
+void saya_ingat(); 
+int main() 
+{ 
+int mamamia = 55;
+ 
+cout <<"di main(): mamamia = "<< mamamia << endl; 
+saya_ingat();
+saya_ingat();
+saya_ingat(); 
+saya_ingat(); 
+cout<< "di main(): mamamia = " << mamamia << endl;
+return 0; 
+}
+void saya_ingat()
+{ 
+static int mamamia = 0; // Variabel statis 
+
+mamamia++; // Naikkan sebesar satu 
+cout<< "di bravo(): mamamia = " << mamamia << endl;
+}
+===================================================
+#include <iostream>
+#include <string>
+using namespace std;
+
+class modelponsel{
+private:
+string model;
+string series;
+int tipe;
+public:
+modelponsel(string model, string series,int tipe){
+modelponsel::model = model;
+modelponsel::series = series;
+modelponsel::tipe = tipe;
+}
+
+void perolehinfo(void){
+cout<<"Model     : "<<model<<endl;
+cout<<"Series    : "<<series<<endl;
+cout<<"Tipe      : "<<tipe<<endl;
+cout<<endl;
+}
+};
+
+int main(){
+modelponsel pabrikan_x("MGT-25","MG",25);
+modelponsel pabrikan_y("SRP-23","SR",23);
+pabrikan_x.perolehinfo();
+pabrikan_y.perolehinfo();
+return 0;
+}

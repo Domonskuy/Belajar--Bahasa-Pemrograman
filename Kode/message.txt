@@ -1,0 +1,221 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string nama;
+    int jurusan;
+
+    cout << "Masukan Nama: ";
+    cin >> nama;
+    cout << "1. Teknik Komputer" << endl;
+    cout << "2. Teknik Informatika " << endl;
+    cout << "3. Perhotelan " << endl;
+    cout << "4. Sistem Informasi " << endl;
+    cout << "5. Akuntansi " << endl;
+    cout << "Masukan Jurusan yang di inginkan:\n";
+    cin >> jurusan;
+
+    cout << "=================================" << endl;
+    cout << "Nama : " << nama << endl;
+    cout << "Jurusan : ";
+    if(jurusan == 1){
+        cout << "Teknik Komputer" << endl;
+    }
+    else if(jurusan == 2){
+        cout << "Teknik Informatika " << endl;
+    }
+    else if(jurusan == 3){
+        cout << "Perhotelan " << endl;
+    }
+    else if(jurusan == 4){
+        cout << "Sistem Informasi " << endl;
+    }
+    else if(jurusan == 5){
+        cout << "Akuntansi " << endl;
+    }
+    else{
+        cout << "Pilihan salah, silahkan ulangi" << endl;
+    }
+}
+
+
+===============================================================================
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+       int nrhari;
+
+     cout<< "Masukkan nomor hari (1 -> 7) : ";
+     cin>>nrhari;
+
+     switch(nrhari){
+          case 1:
+               cout<< "\nHari ke-"<<nrhari<<" adalah SENIN";
+               cout<< "\nMeskipun SENIN Tetap Semangat Ya";
+               break;
+          case 2:
+               cout<< "\nHari ke-"<<nrhari<<" adalah SELASA";
+               cout <<"\nSemangat Untuk Hari SELASA";
+               break;
+          case 3:
+               cout<<"\nHari ke-"<<nrhari<<" adalah RABU";
+               cout<<"\nSudah Hari RABU, Tetap Produktif Ya";
+               break;
+          case 4:
+               cout<<"\nHari ke-"<<nrhari<<" adalah KAMIS";
+               cout<<"\nOrang Manis Terlahir Dihari KAMIS";
+               break;
+          case 5:
+               cout<<"/nHari ke-"<<nrhari<<" adalah JUMAT";
+               cout<<"/nSudah Hari JUMAT, Siap Mudik?";
+               break;
+          case 6:
+               cout<<"\nHari ke-"<<nrhari<<" adalah SABTU";
+               cout<<"\nHari SABTU Mau Liburan Kemana?";
+               break;
+          case 7:
+               cout<<"\nHari ke-"<<nrhari<<" adalah MINGGU";
+               cout<<"\nMari Tidur Seharian di Hari MINGGU";
+               break;
+          default:
+               cout<<"\nTidak terdapat nama hari ke-"<<nrhari<<"";
+     }
+
+     return 0;
+}
+
+
+
+
+==========================================================================
+#include <iostream>
+using namespace std;
+
+    int main()
+{
+    
+    int x;
+    
+        cout <<"BELAJAR PERCABANGAN BERSYARAT IF"; // output yang diharapkan yaitu -> BELAJAR PERCABANGAN BERSYARAT IF
+        cout <<"\n================================\n";
+        cout <<"Masukkan Angka: ";
+        cin>>x;
+
+            if(x > 0){ // jika nila x lebih besar dari angka 0
+
+        cout<< "Angka yang dinputkan bilangan positif"<< endl;
+        }
+        
+        
+return 0;
+    }
+
+
+===============================================================================
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+    int x;
+    int angka = 10;
+    
+    cout<<"Angka 1 - 10"<<endl;
+    cout<<"Masukan Tebakan anda : ";
+    cin>>x;
+    
+    if(x == angka){
+        cout<<"Tebakan anda benar"<<endl;
+        cout<<"Selamat!";
+    }
+    else {
+        cout<<"Maaf tebakan anda salah!"<<endl;
+    }
+}
+==========================================================================================
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int total;
+
+    cout << "Masukan total belanja: \n";
+    cin >> total;
+
+
+    if (total > 100000) // total lebih besar dari 100.000
+    {
+        cout<< "Selamat! anda dapat hadiah";
+    }
+    
+    else{ 
+    cout << "Maaf anda belum dapat hadiah";
+    }
+
+    return 0;
+}
+
+==========================================================================================
+#include <iostream>
+using namespace std;
+int main()
+{
+    
+    int bil;
+        
+        cout << "Masukkan bilangan: ";
+        cin >> bil;
+        
+        if (bil>0){ // jika variabel bil nilai nya lebih besar dari 0
+            cout << bil;
+            cout << " Bilangan bulat positif \n";
+        }
+        else{
+            cout << bil;
+            cout << " Bilangan bulat negatif \n";
+        }
+        
+        return 0;
+    
+}
+
+====================================================================================
+#include <iostream>
+using namespace std;
+int main() {
+int bilangan;
+char huruf;
+// Meminta user untuk memasukkan sebuah bilangan
+cout<<"Masukkan sebuah bilangan bulat : ";
+cin>>bilangan;
+if ((bilangan > 0) && (bilangan < 10))
+cout<<bilangan
+<<" lebih besar dari nol"
+<<" dan lebih kecil dari sepuluh";
+// Meminta user untuk memasukkan sebuah huruf
+cout<<endl<<endl;
+cout<<"Masukkan sebuah huruf : ";
+cin>>huruf;
+if ((huruf == 'A') || (huruf == 'a') ||
+(huruf == 'I') || (huruf == 'i') ||
+(huruf == 'U') || (huruf == 'u') ||
+(huruf == 'E') || (huruf == 'e') ||
+(huruf == 'O') || (huruf == 'o')) {
+cout<<huruf
+<<" adalah salah satu huruf vokal";
+}
+return 0;
+}
+
+
+
+
+
+
+
+

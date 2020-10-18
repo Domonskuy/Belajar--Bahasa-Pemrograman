@@ -1,0 +1,45 @@
+Program Newton1;
+var
+n,i : integer;
+x,y : Array[0..20] of real;
+h,xp,p : real; 
+function Del(rank_n,k:integer):real;
+begin
+if(rank_n = 1) then Del:=y[k+1]-y[k]
+else 
+Del:=Del(rank_n-1,k+1)-Del(rank_n-1,k);
+end;
+function Newton(xp:real):real;
+var
+sum,product,r:real;
+    i,j:integer;
+begin
+r:=(xp-x[0])/h;
+sum:=y[0];
+for i:=1 to n-1 do
+begin
+        product:=1;
+        for j:=0 to i-1 do
+        product:=product*(r-j)/(j+1);
+        sum:=sum+Del(i,0)*product;
+    end;
+newton:=sum;
+end;
+begin;
+write('Jumlah data n = ');readln(n);
+writeln;
+write('Input data x[0] = ');readln(x[0]);
+write('Input data h = '); readln(h);
+for i:=1 to n-1 do
+x[i]:=x[i-1]+h;
+for i:=0 to n-1 do
+    begin
+    write('Input Data y[',i:2,']= ');
+read(y[i]); 
+    end;
+    writeln;
+write('Input x = ');readln(xp);
+P:=Newton(xp);
+writeln('Hasil Perhitungan P(X) = ',p:5:5);
+readln;
+end.

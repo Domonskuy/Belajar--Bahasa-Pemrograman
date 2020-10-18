@@ -1,0 +1,141 @@
+Act no 1
+#include <iostream>
+using namespace std;
+
+int main(){
+    const float PHI = 3.141592;
+    float jari_jari,luas,keliling;
+
+    jari_jari = 10;
+    luas = PHI * jari_jari *jari_jari;
+    keliling = 2 * PHI * jari_jari;
+    
+    cout << "Luas = " << luas << endl;
+    cout << "Keliling = " << keliling << endl;
+
+return 0;
+}
+Act no 2
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char c;
+    int i;
+    float x;
+    
+    x = 176.5;
+    i = x;
+    c = i;
+    
+    cout << "Isi x = " << x << endl;
+    cout << "Isi i = " << i << endl;
+    cout << "Isi c = " << c << endl;
+    
+    return 0;
+}
+Act no 3
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float a,b,t,luas;
+    
+    cout << "Masukkan sisi a: ";
+    cin >> a;
+    cout << "Masukkan sisi b: ";
+    cin >> b;
+    cout << "Masukkan tinggi: ";
+    cin >> t;
+    
+    luas = 0.5 * (a+b) * t;
+    
+    cout <<"\nLuas trapesium: "<< luas;
+    
+    return 0;
+}
+Act no 4
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char karakter;
+    
+    cout << "Masukkan satu karakter: ";
+    cin >> karakter;
+    
+    cout << "Anda mengetikkan  " << karakter << endl;
+    
+    cout << "Masukkan satu karakter: ";
+    cin >> karakter;
+    
+    cout << "Anda mengetikkan  " << karakter << endl;
+    
+    return 0;
+
+}
+Act no 5
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int a1,a2,hasil;
+   
+   cout << "Masukan angka pertama: ";
+   cin>>a1;
+   
+   cout<<"Masukan angka kedua: ";
+   cin>>a2;
+   cout<<endl;
+   
+   hasil=a1*a2; //Rumus perkalian//
+   
+   cout << "Hasil: " <<a1<<" x "<<a2<<" = "<<hasil<<endl;
+    
+    return 0;
+
+}
+Act no 6
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float fahren, celcius;
+    
+    cout << "Nilai derajat Fahrenhet: ";
+    cin >> fahren;
+    
+    celcius = (fahren-32)*5/9;
+    cout << "Identik dengan " << celcius << " derajat Celcius" << endl;
+    
+    return 0;
+
+}
+
+Act no 7   
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float bil_x, bil_y;
+    
+    cout << "Masukkan sebuah bilangan bulat: ";
+    cin >> bil_x;
+    
+    cout << "Masukkan sebuah bilangan pecahan: ";
+    cin >> bil_y;
+    
+    cout << "Bilangan bulat = " << bil_x << endl;
+    cout << "Bilangan pecahan = " << bil_y << endl;
+    
+    return 0;
+
+}
+
+    

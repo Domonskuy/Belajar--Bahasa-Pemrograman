@@ -1,0 +1,103 @@
+#include <iostream>
+using namespace std;
+
+// deklarasi kelas
+class lingkaran{
+   
+// kelas bertipe public 
+    public:
+
+// [[1]] deklarasikan variabel r bertipe data integer
+int r;
+// [[2]] deklarasikan variabel phi bertipe data float
+float phi;
+
+// rumus luas lingkaran        
+    float luas()
+    {
+        return(phi*r*r);
+    }
+};
+
+// menghitung luas lingkaran
+int main(int argc, char *argv[]){
+    lingkaran bundar;
+    float a;
+    int b;
+    
+    cout<<"masulkkan phi : "; cin>>a;
+    cout<<"masulkkan jari-jari : ";cin>>b;
+    bundar.phi=a;
+    bundar.r=b;
+    
+    cout<<"luas = "<<bundar.luas();
+    return 0;
+}
+
+
+================================================
+#include <iostream>
+using namespace std;
+
+// [[1]] Deklarasi class Segitiga
+class Segitiga
+
+{
+    int alas,tinggi;
+    
+    
+    // [[2]] kelas bertipe public
+    public:    
+        float luas()
+    {
+        return(alas * tinggi * 0.5);
+    }
+
+    void set_values(int a, int t)
+    {
+        alas = a;
+        tinggi = t;
+    }
+};
+
+// Penghitungan luas segitiga
+int main()
+{
+    Segitiga Segitiga1;
+    Segitiga Segitiga2;
+    Segitiga1.set_values(7,6);
+    Segitiga2.set_values(3,7);
+    
+    cout << "Luas Segitiga 1 adalah " << Segitiga1.luas() << endl;
+    cout << "Luas Segitiga 2 adalah " << Segitiga2.luas() << endl;
+}
+=====================================================
+#include <iostream>
+using namespace std;
+
+// [[1]] Deklarasikan class PersegiPanjang
+class PersegiPanjang
+{
+// [[2]] Deklarasikan variabel panjang dan lebar bertipe data integer
+  int lebar,panjang;
+// kelas bertipe public
+public:
+    void ukuran (int,int);
+
+    int rumus() {return panjang*lebar;};
+};
+
+    void PersegiPanjang::ukuran(int x, int y) 
+    {
+        panjang = x;
+        lebar = y;
+    };
+
+// Menghitug luas persegi panjang
+int main () 
+{
+    PersegiPanjang luas;
+    luas.ukuran (8,6);
+    cout << "luas persegi panjang: " << luas.rumus();
+    return 0;
+}
